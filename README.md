@@ -1,9 +1,11 @@
 # HL2RPBETA
 
 [![AGPLv3 License](https://img.shields.io/badge/License-AGPLv3-blue
-)](https://choosealicense.com/licenses/mit/)
-![Discord Server](https://img.shields.io/discord/1161489949300900040?logo=discord&logoColor=white&label=Discord
-)
+)](https://github.com/Naidru/HL2RPBETA/blob/main/LICENSE)
+[![Discord Server](https://img.shields.io/discord/1161489949300900040?logo=discord&logoColor=white&label=Discord
+)](https://discord.gg/N8kqyjVzzV)
+![Beta Release](https://img.shields.io/badge/Release-Beta-orange)
+
 
 A Half-Life 2 Beta Roleplaying Schema for IX
 
