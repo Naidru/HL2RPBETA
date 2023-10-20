@@ -1,0 +1,9 @@
+ITEM.name = "Disposable Medkit"
+ITEM.description = "A small, green colored Medkit that sloshes when you shake it."
+ITEM.model = "models/Items/HealthKit.mdl"
+ITEM.class = "weapon_hl_disposal_medkit"
+ITEM.weaponCategory = "grenade"
+ITEM.classes = {CLASS_EOW}
+ITEM.flag = "V"
+ITEM.width = 1
+ITEM.height = 1

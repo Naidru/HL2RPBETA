@@ -1,0 +1,9 @@
+ITEM.name = "Flash Grenade"
+ITEM.description = "A small, vented M84 Flash Grenade filled with violently combusting magnesium powder."
+ITEM.model = "models/weapons/arccw_go/w_eq_flashbang_thrown.mdl"
+ITEM.class = "arccw_go_nade_flash"
+ITEM.weaponCategory = "grenade"
+ITEM.classes = {CLASS_EOW}
+ITEM.flag = "V"
+ITEM.width = 1
+ITEM.height = 1

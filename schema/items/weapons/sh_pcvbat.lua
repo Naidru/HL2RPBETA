@@ -1,0 +1,9 @@
+ITEM.name = "Disposable PCV Battery"
+ITEM.description = "A small, blue colored Battery used to charge stunsticks and vests. Bite the cap off and use it."
+ITEM.model = "models/Items/Battery.mdl"
+ITEM.class = "weapon_hl_suitcharge"
+ITEM.weaponCategory = "grenade"
+ITEM.classes = {CLASS_EOW}
+ITEM.flag = "V"
+ITEM.width = 1
+ITEM.height = 1

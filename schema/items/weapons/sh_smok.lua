@@ -1,0 +1,9 @@
+ITEM.name = "Smoke Grenade"
+ITEM.description = "A small, white colored M18 grenade that explodes a few seconds after it is thrown."
+ITEM.model = "models/weapons/w_eq_smokegrenade.mdl"
+ITEM.class = "arccw_go_nade_smoke"
+ITEM.weaponCategory = "grenade"
+ITEM.classes = {CLASS_EOW}
+ITEM.flag = "V"
+ITEM.width = 1
+ITEM.height = 1

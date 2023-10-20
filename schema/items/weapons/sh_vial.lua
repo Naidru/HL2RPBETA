@@ -1,0 +1,9 @@
+ITEM.name = "Disposable Medigel Vial"
+ITEM.description = "A small, green colored Medigel Vial, it looks glowy."
+ITEM.model = "models/Items/HealthVial.mdl"
+ITEM.class = "weapon_hl_healthvial"
+ITEM.weaponCategory = "grenade"
+ITEM.classes = {CLASS_EOW}
+ITEM.flag = "V"
+ITEM.width = 1
+ITEM.height = 1
