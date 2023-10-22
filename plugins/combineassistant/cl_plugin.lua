@@ -128,7 +128,7 @@ concommand.Add("+CombineAssistant", function()
 			end):SetIcon("icon16/flag_red.png")
 			voltageChild:AddOption("Overcharge", function()
 			    PLUGIN:PlayerCLSay("/me sets their Stunstick's voltage setting to Overcharge.")
-			end):SetIcon("icon16/exclamation")
+			end):SetIcon("icon16/flag_purple.png")
 
 		performChild:AddOption("Search Instructions", function()
 			PLUGIN:PlayerCLSay(ix.option.Get("caSearchInstructions"))
