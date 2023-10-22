@@ -23,10 +23,6 @@ function FACTION:OnCharacterCreated(client, character)
 	character:SetData("cid", id)
 
 	inventory:Add("suitcase", 1)
-	inventory:Add("cid", 1, {
-		name = character:GetName(),
-		id = id
-	})
 end
 
 FACTION_CITIZEN = FACTION.index
