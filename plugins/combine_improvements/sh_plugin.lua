@@ -24,13 +24,17 @@ PLUGIN.SocioStatusCol = {
 }]]
 
 PLUGIN.Ranks = { -- Edit these following the template to make this work
-  [1] = {"i5"},
-  [2] = {"i4"},
-  [3] = {"i3"},
-  [4] = {"i2"},
-  [5] = {"i1"},
-  [6] = {"RL", nil, nil, true}, -- true means if they have access to the command terminal
-  [7] = {"CmD", nil, nil, true}
+  [1] = {"RcT"},
+  [2] = {"i5"},
+  [3] = {"i4"},
+  [4] = {"i3"},
+  [5] = {"i2"},
+  [6] = {"i1"},
+  [7] = {"OfC"},
+  [8] = {"EpU"},
+  [9] = {"DvL", nil, nil, true},
+  [10] = {"CmD", nil, nil, true}, -- true means if they have access to the command terminal
+  [11] = {"SeC", nil, nil, true}
 }
 
 PLUGIN.Divisions = { -- add your divisions here

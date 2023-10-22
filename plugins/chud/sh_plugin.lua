@@ -5,15 +5,51 @@ PLUGIN.author = "Scotnay"
 PLUGIN.description = "A set of improvements for Universal Union factions"
 
 -- This is only needed if you're going to use taglines
-PLUGIN.divisions = { "UNION", "DEFENDER", "JURY" }
+PLUGIN.divisions = {
+                     -- CCA --
+                     "UNION",
+                     "HELIX",
+                     "GRID",
+                     "JURY",
+                     "GHOST",
+                     "PRESSURE",
+                     -- EPU --
+                     "SWORD",
+                     "APEX",
+                     "BLADE",
+                     "JUDGE",
+                     "ANVIL",
+                     "SAVAGE",
+                     "WRAITH",
+                     -- SeC --
+                     "SeC",
+                     "ION",
+                     -- OTA --
+                     "ECHO",
+                     "KING",
+                     "DAGGER",
+                     "PHANTOM",
+                     "HURRICANE",
+                     "X-RAY",
+                     "XRAY",
+                     "RANGER",
+                     "DEFENDER",
+                   }
 
 -- Key is rank and bool is whether or not they can use HC Terminal
 PLUGIN.ranks = {
-  [ "i3" ] = false,
-  [ "i2" ] = false,
-  [ "i1" ] = false,
-  [ "RL" ] = true,
-}
+                   [ "RCT" ] = false,
+                   [ "i5" ] = false,
+                   [ "i4" ] = false,
+                   [ "i3" ] = false,
+                   [ "i2" ] = false,
+                   [ "i1" ] = false,
+                   [ "OfC" ] = false,
+                   [ "EpU" ] = false,
+                   [ "DvL" ] = true,
+                   [ "CmD" ] = true,
+                   [ "SeC" ] = true
+               }
 
 PLUGIN.SocioColors = {
   [ "GREEN" ] = Color( 0, 255, 0 ),
