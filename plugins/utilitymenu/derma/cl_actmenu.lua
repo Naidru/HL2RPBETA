@@ -84,13 +84,13 @@ local function ixActMenu()
 		left:AddItem( but )
 		
 				local but = vgui.Create( "DButton", frame )
-		but:SetText( "Enhanced Description" )
+		but:SetText( "Detailed Description" )
 		but:SetFont("ixSmallFont")
 		but:SetSize( 36, 50 )
 		but:Dock( TOP )
 		but.DoClick = function()
 			frame:Close()
-			RunConsoleCommand("say", "/selfdesc")
+			RunConsoleCommand("say", "/chardetdesc")
 		end
 		left:AddItem( but )
 	
