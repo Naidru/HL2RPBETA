@@ -1,6 +1,8 @@
 FACTION.name = "Synth"
 FACTION.description = "A transhuman Overwatch soldier produced by the Combine."
 FACTION.color = Color(140, 102, 98)
+FACTION.models = {"models/icarus_anon.mdl"}
+FACTION.weapons = {"weapon_vj_npccontroller"}
 FACTION.isDefault = false
 FACTION.isGloballyRecognized = true
 
