@@ -11,4 +11,4 @@ We care about the quality of our work for our community and contributors. Below 
 ## Reporting a Vulnerability
 
 Alongside with protecting the safety of our userbase, vulnerabilities are not to be publicly listed in Issues along with the rest of bug or minor security realated issues.
-Please DM 'naidru' on the Corrugated Dawn discord server about the vulnerability and how to repro it.
+Please send the vulnerability to us through our special section specifically designed for larger scale vulnerabilities.
