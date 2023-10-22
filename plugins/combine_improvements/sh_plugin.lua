@@ -65,7 +65,7 @@ PLUGIN.Divisions = { -- add your divisions here
   "X-RAY",
   "XRAY",
   "RANGER",
-  "DEFENDER",
+  "DEFENDER"
 }
 
 PLUGIN.Numbers = "%d%d" -- Edit this line depending on how many numbers you use, if you use City Numbers (E.g. C17, C8, I17, etc) and don't understand how to make it work DM me

@@ -33,7 +33,7 @@ PLUGIN.divisions = {
                      "X-RAY",
                      "XRAY",
                      "RANGER",
-                     "DEFENDER",
+                     "DEFENDER"
                    }
 
 -- Key is rank and bool is whether or not they can use HC Terminal
