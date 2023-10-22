@@ -280,7 +280,7 @@ local function nRankEdit( len, client )
   local newRank = net.ReadString()
 
   if ( ent == client ) then
-    client:Notify( "Stop it you little cunt" )
+    client:Notify( "You cannot rank yourself!" )
     return
   end
 
