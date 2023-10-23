@@ -29,3 +29,5 @@ function FACTION:OnNameChanged(client, oldValue, value)
 
 	end
 end
+
+FACTION_SYNTH = FACTION.index
