@@ -30,6 +30,10 @@ function FACTION:OnNameChanged(client, oldValue, value)
 
 	if (!Schema:IsCombineRank(oldValue, "RCT") and Schema:IsCombineRank(value, "RCT")) then
 		character:JoinClass(CLASS_MPR)
+
+	elseif (!Schema:IsCombineRank(oldValue, "i5") and Schema:IsCombineRank(value, "i5")) then
+	    character:JoinClass(CLASS_MPF)
+
 	elseif (!Schema:IsCombineRank(oldValue, "OfC") and Schema:IsCombineRank(value, "OfC")) then
 		--character:SetModel("models/policetrench.mdl")
 	elseif (!Schema:IsCombineRank(oldValue, "EpU") and Schema:IsCombineRank(value, "EpU")) then
