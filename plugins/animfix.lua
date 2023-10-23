@@ -17,3 +17,8 @@ ix.anim.SetModelClass("models/combinesoldier2002.mdl", "metrocop")
 ix.anim.SetModelClass("models/combine_soldierresistancenormalshotgun.mdl", "metrocop")
 ix.anim.SetModelClass("models/betasoldiercombine.mdl", "metrocop")
 ix.anim.SetModelClass("models/combine_soldier_resistancenormal.mdl", "metrocop")
+
+-- HEV Suitcase
+ix.anim.SetModelClass("models/humans/hev_mark3.mdl", "citizen_male")
+ix.anim.SetModelClass("models/humans/hev_mark2.mdl", "citizen_male")
+ix.anim.SetModelClass("models/paynamia/bms/gordon_survivor.mdl", "citizen_male")
