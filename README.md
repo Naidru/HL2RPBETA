@@ -11,6 +11,10 @@
 
 It is recommended to download the [Content Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=3049488678) as this schema is based off of it
 
+## Support
+
+For support or if you would like to join our roleplaying server, join our [discord server](https://discord.gg/N8kqyjVzzV)
+
 ## Authors
 
 - [@naidru](https://www.github.com/naidru)
@@ -18,7 +22,3 @@ It is recommended to download the [Content Pack](https://steamcommunity.com/shar
 ## License
 
 [GNU Affero General Public License v3.0](https://github.com/Naidru/HL2RPBETA/blob/main/LICENSE)
-
-## Support
-
-For support, join our [discord server](https://discord.gg/N8kqyjVzzV)
