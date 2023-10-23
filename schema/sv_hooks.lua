@@ -70,10 +70,14 @@ end
 
 function Schema:PostPlayerLoadout(client)
 	if (client:IsCombine()) then
-		if (client:Team() == FACTION_OTA) then
+		if (client:Team() == FACTION_OTA and client:Class() == CLASS_OWS) then
 			client:SetMaxHealth(150)
 			client:SetHealth(150)
 			client:SetArmor(150)
+		elseif (client:Team() == FACTION_OTA and client:Class() == CLASS_EOW) then
+		    client:SetMaxHealth(200)
+		    client:SetHealth(200)
+		    client:SetArmor(200)
 		elseif (client:IsScanner()) then
 			if (client.ixScanner:GetClass() == "npc_clawscanner") then
 				client:SetHealth(200)
