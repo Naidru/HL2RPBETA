@@ -418,7 +418,7 @@ Schema.voices.Add("Dispatch", "UNREST PROCEDURE", "Attention, community: Unrest 
 Schema.voices.Add("Dispatch", "UNREST STRUCTURE", "Alert, community ground-protection units, local unrest structure detected. ASSEMBLE, ADMINISTER, PACIFY.", "npc/overwatch/cityvoice/f_localunrest_spkr.wav", true)
 
 Schema.voices.AddClass("Combine", function(client)
-	return ( client:IsCombine() and ( not CheckForFemal( client ) ) )
+	return ( client:IsCombine() and not ( CheckForFemal( client ) or ( client:Team() == FACTION_SYNTH ) ) )
 end)
 
 Schema.voices.AddClass("Dispatch", function(client)

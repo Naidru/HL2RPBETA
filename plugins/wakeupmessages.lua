@@ -17,7 +17,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 -- Feel free to change any of these messages.
 local wakeupmessages = {
     "You wake up from a long nap and recover from your sleep.",
-    "You stand up and sniffing the fresh air from the world.",
+    "You stand up and sniffing the ''fresh'' air from the world.",
     "You start to stand up and recover from your sleep.",
     "You are sweating from all the scare you have been getting from your deam and you wake up.",
     "You were dreaming of someone and you heard their voice, you started to wake up.",
