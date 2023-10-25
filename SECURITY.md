@@ -6,7 +6,10 @@ We care about the quality of our work for our community and contributors. Below 
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.1.x  | :white_check_mark: |
+| 0.1.x  | :white_check_mark: (LEGACY) |
+| 1.0.x-dev  | ⚠️ (ALPHA) | 
+
+1.0.x-dev is currently an Alpha build and is not considered yet stable. Very minimal support will be offered for these builds
 
 ## Reporting a Vulnerability
 
