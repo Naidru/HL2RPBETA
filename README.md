@@ -18,6 +18,8 @@ For support or if you would like to join our roleplaying server, join our [disco
 ## Authors
 
 - [@naidru](https://www.github.com/naidru)
+- [@umbriee](https://github.com/Umbriee)
+- [@reddywastaken](https://github.com/Reddywastaken)
 
 ## License
 
