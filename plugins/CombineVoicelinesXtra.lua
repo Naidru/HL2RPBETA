@@ -676,3 +676,32 @@ end)
 Schema.voices.AddClass("Assasin", function(client)
 	return ( client:IsCombine() && CheckForFemal( client ) )
 end)
+
+-- heavy synth --
+	-- Alert --
+	Schema.voices.Add("HeavySynth", "Alert", "*Vocodes a loud and annoying alert sound.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_alert1.ogg")
+	Schema.voices.Add("HeavySynth", "Alert2", "*Blares a loud and annoying alert sound.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_alert2.ogg")
+	Schema.voices.Add("HeavySynth", "Alert3", "*Emits a loud and annoying alert sound.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_alert3.ogg")
+	-- Anger --
+	Schema.voices.Add("HeavySynth", "Anger", "*Vocodes a high pitch angry sound.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_anger1.ogg")
+	Schema.voices.Add("HeavySynth", "Anger2", "*Emits an alarming high pitch angry sound.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_anger2.ogg")
+	-- Scan --
+	Schema.voices.Add("HeavySynth", "Scan", "*Begins making sequencial sounds.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_scan1.ogg")
+	Schema.voices.Add("HeavySynth", "Scan2", "*Emits making sequencial sounds.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_scan2.ogg")
+	Schema.voices.Add("HeavySynth", "Scan3", "*Vocodes making sequencial sounds.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_scan3.ogg")
+	Schema.voices.Add("HeavySynth", "Scan4", "*Starts making sequencial sounds, almost scanning its environment.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_scan4.ogg")
+	Schema.voices.Add("HeavySynth", "Scan5", "*Starts to make sequencial sounds.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_scan5.ogg")
+	Schema.voices.Add("HeavySynth", "Scan6", "*Begins making sequencial sounds.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_scan6.ogg")
+	-- Speech --
+	Schema.voices.Add("HeavySynth", "Speech", "*Stops and voices a radio sound followed by what seems like alien talking.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_speech1.ogg")
+	Schema.voices.Add("HeavySynth", "Speech2", "*Stops suddenly and voices sounds that seems like talking.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_speech2.ogg")
+	Schema.voices.Add("HeavySynth", "Speech3", "*Stops randomly and voices a radio sound followed by what seems like talking.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_speech3.ogg")
+	Schema.voices.Add("HeavySynth", "Speech4", "*Stops and voices radio sound followed by what seems like talking.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_speech4.ogg")
+	Schema.voices.Add("HeavySynth", "Speech5", "*Stops and voices radio sound followed by what seems like talking.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_speech5.ogg")
+	Schema.voices.Add("HeavySynth", "Speech6", "*Stops and voices radio sound followed by what seems like talking.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_speech6.ogg")
+	Schema.voices.Add("HeavySynth", "Speech7", "*Stops and voices radio sound followed by what seems like talking.*", "CourragatedDawn/Xtra/npc/HeavySynthSounds/hvy_snt_speech7.ogg")
+-- end --
+
+Schema.voices.AddClass("HeavySynth", function(client)
+	return ( client:Team() == FACTION_SYNTH )
+end)
