@@ -16,21 +16,29 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 -- Feel free to change any of these messages.
 local wakeupmessages = {
-    "You wake up from a long nap and recover from your sleep.",
-    "You stand up and sniffing the ''fresh'' air from the world.",
-    "You start to stand up and recover from your sleep.",
-    "You are sweating from all the scare you have been getting from your deam and you wake up.",
-    "You were dreaming of someone and you heard their voice, you started to wake up.",
+    "Xenian lightning flashes across the skies, the sound of vortigaunt chanting begins to urge you awake.",
+    "Noises of gunfire, and the sound of the 7 Hour War echoes from the past. You wake up, uneasy.",
+    "The sounds of stomping boot steps fills your ears, reminiscent of Combine troopers marching through the streets. It jolts you awake.",
+    "A crackle of thunder and a green flash of light fills your vision, and forces you to open your eyes.",
+    "You were having a nightmare, you woke up after being chased by a strange looking Xenian.",
     "You hear a small whisper in your ear, after that you hear loud footsteps fading away, you wake up being scared.",
+    "Green lightning quakes across the skies, as you look up to see the portals flaring through the clouds.",
+    "For a moment, you heard your family, and everything was normal.. But when you opened your eyes, you saw the wasteland before you.",
     "You hear a loud helicopter overhead of yourself and you instantly wake up.",
-    "You heard a growling and you started to wake up but scared.",
+    "You heard a growling and you started to wake up, scared.",
     "You heard a loud siren and you are scared of the noise.",
+    "The sounds of artillery fire and panicking soldiers from the past began to stir you awake.",
+    "The sound of a ships' fog horn instantly wakes you up, you are drenched in sweat.",
+    "The sound of Combine alarms ringing through the air scares you into awakening.",
+    "Days from the city made you wake up, terrified you were about to be transferred again.",
+    "Your eyes jolt awake as you hear a nearby xenian portal.",
+    "You begin to feel uneasy as you could swear you heard a houndeyes' chirping somewhere.",
 }
 
 function PLUGIN:PlayerSpawn(ply)
     if not ( ply:IsValid() or ply:Alive() or ply:GetCharacter() ) then return end
 
-    ply:ConCommand("play music/stingers/hl1_stinger_song16.mp3")
+    ply:ConCommand("play ambient/levels/city/citadel_cloudhit3.wav")
     ply:ScreenFade(SCREENFADE.IN, color_black, 3, 2)
     ply:ChatPrint(table.Random(wakeupmessages))
 end

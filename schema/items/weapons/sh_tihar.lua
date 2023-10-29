@@ -1,7 +1,7 @@
 ITEM.name = "Crude Pneumatic Rifle"
 ITEM.description = "Powerful, unconventional take on a stealth sniper. Surprisingly deadly at the pressures it's rated to."
-ITEM.model = "models/weapons/arccw_go/v_rif_aug.mdl"
-ITEM.class = "arccw_go_aug"
+ITEM.model = "models/weapons/c_tikhar.mdl"
+ITEM.class = "arccw_tikhar"
 ITEM.weaponCategory = "primary"
 ITEM.flag = "V"
 ITEM.width = 4
