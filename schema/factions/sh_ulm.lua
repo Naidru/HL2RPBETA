@@ -1,6 +1,6 @@
 FACTION.name = "Union Loyalist Militia"
 FACTION.description = "Union Loyalist Militia: Protection for the people, by the people. Defend yourself and your community today!"
-FACTION.color = Color(67, 54, 77 255)
+FACTION.color = Color(67, 54, 77, 255)
 FACTION.models = {
 	"models/willardnetworks/citizens/female_05.mdl",
 	"models/willardnetworks/citizens/female_04.mdl",
