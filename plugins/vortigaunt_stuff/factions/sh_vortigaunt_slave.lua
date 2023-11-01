@@ -2,7 +2,7 @@
 FACTION.name = "Vortigaunt Slave"
 FACTION.description = "Brutally enslaved vortigaunts stripped of their power and from their vortal brethren, often subjected to cruel and vigorous tortures and exceedingly overworked. Often used as batteries and discarded like petals."
 FACTION.color = Color(28, 148, 80, 255)
-FACTION.models = {"models/vortigaunt_slave.mdl"}
+FACTION.models = {"models/willardnetworks/vortigaunt.mdl"}
 FACTION.weapons = {"swep_vortigaunt_sweep"}
 FACTION.isDefault = false
 FACTION.isGloballyRecognized = false

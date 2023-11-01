@@ -1,4 +1,4 @@
 
 STATION.name = "Workbench"
-STATION.description = "A workbench used for crafting."
-STATION.model = "models/props_wasteland/controlroom_desk001b.mdl"
+STATION.description = "A workbench used for crafting and construction."
+STATION.model = "models/mosi/fallout4/furniture/workstations/workshopbench.mdl"

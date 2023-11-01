@@ -1,7 +1,7 @@
 ITEM.name = "Civil Worker's Union Lock"
 ITEM.category = "Lit Locks"
 ITEM.description = "A metal apparatus applied to doors."
-ITEM.model = Model("models/props_combine/combine_lock01.mdl")
+ITEM.model = Model("models/willardnetworks/props_combine/wn_combine_lock.mdl")
 ITEM.width = 1
 ITEM.height = 2
 ITEM.iconCam = {

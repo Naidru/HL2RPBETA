@@ -42,7 +42,7 @@ if (CLIENT) then
             statusDescription = "Take this ration to the packing machine"
         elseif (self:GetReady()) then
             statusTitle = "Packaged Ration"
-            statusDescription = "Take this ration to the rations depot"
+            statusDescription = "Take this ration to the rations depot, the machine will paint and sort it as needed."
         end
         
         local title = ration:AddRow("name")

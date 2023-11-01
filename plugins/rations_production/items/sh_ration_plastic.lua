@@ -1,6 +1,6 @@
 ITEM.name = "Synthesized Plastic"
-ITEM.description = "This piece of plastic can be molded into a ration wrapper"
-ITEM.model = "models/props_junk/garbage_bag001a.mdl"
+ITEM.description = "This piece of plastic junk can be molded into a ration wrapper"
+ITEM.model = "models/willardnetworks/food/raw_alienmeat.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.iconCam = {

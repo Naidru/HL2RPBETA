@@ -49,7 +49,7 @@ if (SERVER) then
         self:SetEnabled(true)
 
         self.dispenser = ents.Create("prop_dynamic")
-        self.dispenser:SetModel("models/props_combine/combine_dispenser.mdl")
+        self.dispenser:SetModel("models/willardnetworks/props_combine/combine_dispenser.mdl")
         self.dispenser:SetPos(self:GetPos())
         self.dispenser:SetAngles(self:GetAngles())
         self.dispenser:SetParent(self)
@@ -58,7 +58,7 @@ if (SERVER) then
         self:DeleteOnRemove(self.dispenser)
 
         self.dummy = ents.Create("prop_physics")
-        self.dummy:SetModel("models/weapons/w_package.mdl")
+        self.dummy:SetModel("models/weapons/w_packatc.mdl")
         self.dummy:SetPos(self:GetPos())
         self.dummy:SetAngles(self:GetAngles())
         self.dummy:SetMoveType(MOVETYPE_NONE)
