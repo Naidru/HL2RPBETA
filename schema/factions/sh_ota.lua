@@ -20,7 +20,7 @@ function FACTION:OnCharacterCreated(client, character)
 end
 
 function FACTION:GetDefaultName(client)
-	return "OTA:C17.ECHO-OWS." .. Schema:ZeroNumber(math.random(1, 99999), 5), true
+	return "OTA:C24.ECHO-OWS." .. Schema:ZeroNumber(math.random(1, 99999), 5), true
 end
 
 function FACTION:OnTransferred(character)
