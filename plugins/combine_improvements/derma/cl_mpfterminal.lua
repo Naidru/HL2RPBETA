@@ -71,7 +71,7 @@ function PANEL:PopulateCitizens()
   for ply, char in ix.util.GetCharacters() do
     local faction = char:GetFaction()
 
-    if faction == FACTION_CITIZEN then
+    if faction == FACTION_CITIZEN or faction == FACTION_CIC or faction == FACTION_CMU or faction == FACTION_CMUDIRECTOR or faction == FACTION_CWU or faction == FACTION_CWUDIRECTOR or faction == FACTION_ULM then
       self.CitizenList:AddLine(char:GetName(), ply:GetNWString("cid", "NO CID"), ply:GetNWString("CivilStatus", "NO CITIZEN STATUS"))
     end
   end
@@ -380,7 +380,7 @@ function PANEL:RefreshList()
 
     for ply, char in ix.util.GetCharacters() do
       local faction = char:GetFaction()
-      if faction == FACTION_CITIZEN then
+      if faction == FACTION_CITIZEN or faction == FACTION_CIC or faction == FACTION_CMU or faction == FACTION_CMUDIRECTOR or faction == FACTION_CWU or faction == FACTION_CWUDIRECTOR or faction == FACTION_ULM then
         self.CitizenList:AddLine(char:GetName(), ply:GetNWString("cid", "NO CID"), ply:GetNWString("CivilStatus", "NO CITIZEN STATUS"))
       end
     end

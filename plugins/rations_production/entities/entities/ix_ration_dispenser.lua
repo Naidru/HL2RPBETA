@@ -135,7 +135,7 @@ if (SERVER) then
             return
         end
 
-        if (client:Team() == FACTION_CITIZEN) then
+        if (client:Team() == FACTION_CITIZEN or client:Team() == FACTION_CIC or client:Team() == FACTION_CMU or client:Team() == FACTION_CMUDIRECTOR or client:Team() == FACTION_CWU or client:Team() == FACTION_CWUDIRECTOR or client:Team() == FACTION_ULM ) then
             if (!self:GetEnabled()) then
                 self:DisplayError(6)
                 return

@@ -142,7 +142,7 @@ end
 
 -- creates labels in the status screen
 function Schema:CreateCharacterInfo(panel)
-	if (LocalPlayer():Team() == FACTION_CITIZEN) then
+	if (LocalPlayer():Team() == FACTION_CITIZEN or LocalPlayer():Team() == FACTION_CIC or LocalPlayer():Team() == FACTION_CMU or LocalPlayer():Team() == FACTION_CMUDIRECTOR or LocalPlayer():Team() == FACTION_CWU or LocalPlayer():Team() == FACTION_CWUDIRECTOR or LocalPlayer():Team() == FACTION_ULM) then
 		panel.cid = panel:Add("ixListRow")
 		panel.cid:SetList(panel.list)
 		panel.cid:Dock(TOP)
@@ -152,7 +152,7 @@ end
 
 -- populates labels in the status screen
 function Schema:UpdateCharacterInfo(panel)
-	if (LocalPlayer():Team() == FACTION_CITIZEN) then
+	if (LocalPlayer():Team() == FACTION_CITIZEN or LocalPlayer():Team() == FACTION_CIC or LocalPlayer():Team() == FACTION_CMU or LocalPlayer():Team() == FACTION_CMUDIRECTOR or LocalPlayer():Team() == FACTION_CWU or LocalPlayer():Team() == FACTION_CWUDIRECTOR or LocalPlayer():Team() == FACTION_ULM) then
 		panel.cid:SetLabelText(L("citizenid"))
 		panel.cid:SetText(string.format("##%s", LocalPlayer():GetCharacter():GetData("cid") or "UNKNOWN"))
 		panel.cid:SizeToContents()

@@ -103,7 +103,7 @@ function PLUGIN:HUDPaint()
     local AllConscripts = {}
 
     for client, char in ix.util.GetCharacters() do
-      if char:GetFaction() == FACTION_CITIZEN then
+      if char:GetFaction() == FACTION_CITIZEN or char:GetFaction() == FACTION_CIC or char:GetFaction() == FACTION_CMU or char:GetFaction() == FACTION_CMUDIRECTOR or char:GetFaction() == FACTION_CWU or char:GetFaction() == FACTION_CWUDIRECTOR or char:GetFaction() == FACTION_ULM then
         AllCitizens[#AllCitizens + 1] = char:GetName() .. ": #" .. client:GetNWString("cid", "<ERR>")
       elseif char:IsCombine() then
         AllUnits[#AllUnits + 1] = char:GetName()
@@ -129,7 +129,7 @@ function PLUGIN:HUDPaint()
       local ToScreen = bonepos:ToScreen()
       local distance = LocalPlayer():GetPos():Distance(bonepos)
       local CanSee = LocalPlayer():IsLineOfSightClear(client)
-      if char:GetFaction() == FACTION_CITIZEN and client:Alive() and (client:GetMoveType() != MOVETYPE_NOCLIP) then
+      if char:GetFaction() == FACTION_CITIZEN or char:GetFaction() == FACTION_CIC or char:GetFaction() == FACTION_CMU or char:GetFaction() == FACTION_CMUDIRECTOR or char:GetFaction() == FACTION_CWU or char:GetFaction() == FACTION_CWUDIRECTOR or char:GetFaction() == FACTION_ULM and client:Alive() and (client:GetMoveType() != MOVETYPE_NOCLIP) then
         local cid = client:GetNWString("cid", "ERR NO CID")
         local cstatus = client:GetNWString("CivilStatus", "NO CIVIL STATUS")
         local statcol = StatCol[cstatus] or Color(255, 0, 0)

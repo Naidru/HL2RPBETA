@@ -189,7 +189,7 @@ function PLUGIN:OnCharacterCreated(client, character)
   print(character)
   print(client)
 
-  if faction == FACTION_CITIZEN then
+  if faction == FACTION_CITIZEN or faction == FACTION_CIC or faction == FACTION_CMU or faction == FACTION_CMUDIRECTOR or faction == FACTION_CWU or faction == FACTION_CWUDIRECTOR or faction == FACTION_ULM then
     character:SetData("CivilStatus", "STABLE")
     client:SetNWString("CivilStatus", "STABLE")
   end

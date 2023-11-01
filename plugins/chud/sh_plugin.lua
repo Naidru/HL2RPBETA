@@ -62,7 +62,13 @@ PLUGIN.SocioColors = {
 -- This is used to determine what factions should be considered citizens
 -- and therefore show up in the terminals.
 PLUGIN.civFactions = {
-  [ FACTION_CITIZEN ] = true
+  [ FACTION_CITIZEN ] = true,
+  [ FACTION_CIC ] = true,
+  [ FACTION_CMU ] = true,
+  [ FACTION_CMUDIRECTOR ] = true,
+  [ FACTION_CWU ] = true,
+  [ FACTION_CWUDIRECTOR ] = true,
+  [ FACTION_ULM ] = true
 }
 
 ix.util.Include( "cl_hooks.lua" )

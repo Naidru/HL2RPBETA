@@ -91,7 +91,7 @@ function PANEL:Init()
     end
 
     for client, char in ix.util.GetCharacters() do
-      if char:GetFaction() == FACTION_CITIZEN then
+      if char:GetFaction() == FACTION_CITIZEN or char:GetFaction() == FACTION_CIC or char:GetFaction() == FACTION_CMU or char:GetFaction() == FACTION_CMUDIRECTOR or char:GetFaction() == FACTION_CWU or char:GetFaction() == FACTION_CWUDIRECTOR or char:GetFaction() == FACTION_ULM then
         list:AddLine(client:GetName(), client:GetNWString("cid", "ERR NO CID"), client:GetNWString("CivilStatus", "NO CIVIL STATUS"))
       end
     end

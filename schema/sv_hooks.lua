@@ -104,7 +104,7 @@ end
 function Schema:PlayerLoadedCharacter(client, character, oldCharacter)
 	local faction = character:GetFaction()
 
-	if (faction == FACTION_CITIZEN) then
+	if (faction == FACTION_CITIZEN or faction == FACTION_CIC or faction == FACTION_CMU or faction == FACTION_CMUDIRECTOR or faction == FACTION_CWU or faction == FACTION_CWUDIRECTOR or faction == FACTION_ULM) then
 		self:AddCombineDisplayMessage("@cCitizenLoaded", Color(255, 100, 255, 255))
 	elseif (client:IsCombine()) then
 		client:AddCombineDisplayMessage("@cCombineLoaded")
