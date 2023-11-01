@@ -164,7 +164,9 @@ function PLUGIN:PlayerLoadedCharacter(client, character, currentChar)
     if character:GetFaction() == FACTION_MPF then
       Schema:AddCombineDisplayMessage("All units be aware cohesive biosignal from " .. character:GetName() .. " has been received...", Color(220, 0, 255))
     elseif character:GetFaction() == FACTION_OTA then
-      Schema:AddCombineDisplayMessage("All units be aware Overwatch Asset deployed from stasis...", Color(220, 0, 255))
+      Schema:AddCombineDisplayMessage("All units be aware Overwatch Transhuman Asset deployed from stasis...", Color(220, 0, 255))
+    elseif character:GetFaction() == FACTION_SYNTH then
+      Schema:AddCombineDisplayMessage("All units be aware Overwatch Synthetic Asset " .. character:GetName() .. " deployed from stasis...", Color(220, 0, 255))
     end
 
     for _, v in pairs(player.GetAll()) do
