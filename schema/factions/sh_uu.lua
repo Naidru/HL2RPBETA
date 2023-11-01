@@ -3,18 +3,24 @@ FACTION.name = "Universal Union Official"
 FACTION.description = "Universal Union Representatives: Directly Represent the Union's interests and demands to better the Human race, and bring Unity to Earth. Your failures will mark our race's end. Do not dissapoint."
 FACTION.color = Color(94, 226, 255, 255)
 FACTION.models = {
-	"models/industrial_uniforms/industrial_uniform2.mdl",
-	"models/industrial_uniforms/industrial_uniform.mdl",
-	"models/hlvr/characters/worker/npc/worker_citizen.mdl",
-	"models/hlvr/characters/hazmat_worker/npc/hazmat_worker_citizen.mdl",
-	"models/hazcit_npc.mdl",
-	"models/snood_17/male_04.mdl",
-	"models/humans/gasmask/gascit.mdl",
-	"models/humans/gasmask/gasmask_civi_01.mdl",
-    "models/humans/airex/airex_male.mdl",
-    "models/humans/airex/airex_female.mdl"
+	"models/humans/combine/female_01.mdl",
+	"models/humans/combine/female_02.mdl",
+	"models/humans/combine/female_03.mdl",
+	"models/humans/combine/female_04.mdl",
+	"models/humans/combine/female_06.mdl",
+	"models/humans/combine/female_07.mdl",
+	"models/humans/combine/female_ga.mdl",
+	"models/humans/combine/male_01.mdl",
+	"models/humans/combine/male_02.mdl",
+	"models/humans/combine/male_03.mdl",
+	"models/humans/combine/male_04.mdl",
+	"models/humans/combine/male_05.mdl",
+	"models/humans/combine/male_06.mdl",
+	"models/humans/combine/male_07.mdl",
+	"models/humans/combine/male_08.mdl",
+	"models/humans/combine/male_09.mdl"
 }
-FACTION.isDefault = true
+FACTION.isDefault = false
 
 function FACTION:OnCharacterCreated(client, character)
 	local id = Schema:ZeroNumber(math.random(1, 99999), 5)

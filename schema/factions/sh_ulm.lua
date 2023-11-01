@@ -48,7 +48,7 @@ FACTION.models = {
 "models/earl_rp/citizens/player/male_08.mdl",
 "models/earl_rp/citizens/player/male_09.mdl"
 }
-FACTION.isDefault = true
+FACTION.isDefault = false
 
 function FACTION:OnCharacterCreated(client, character)
 	local id = Schema:ZeroNumber(math.random(1, 99999), 5)
