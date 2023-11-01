@@ -40,7 +40,7 @@ FACTION.models = {
 	"models/humans/group01/drconnors.mdl",
 	"models/humans/barnes/c8_admin.mdl",
 	"models/humans/barnes/oshikawa.mdl",
-	"models/humans/group03m/female_47.mdl"
+	"models/humans/group03m/female_47.mdl",
     "models/industrial_uniforms/industrial_uniform2.mdl",
 	"models/industrial_uniforms/industrial_uniform.mdl",
 	"models/hlvr/characters/worker/npc/worker_citizen.mdl",
