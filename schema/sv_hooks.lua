@@ -70,11 +70,11 @@ end
 
 function Schema:PostPlayerLoadout(client)
 	if (client:IsCombine()) then
-		if (client:Team() == FACTION_OTA and client:Class() == CLASS_OWS) then
+		if (client:Team() == FACTION_OTA and Schema:IsCombineRank(value, "OWS")) then
 			client:SetMaxHealth(150)
 			client:SetHealth(150)
 			client:SetArmor(150)
-		elseif (client:Team() == FACTION_OTA and client:Class() == CLASS_EOW) then
+		elseif (client:Team() == FACTION_OTA and Schema:IsCombineRank(value, "EOW")) then
 		    client:SetMaxHealth(200)
 		    client:SetHealth(200)
 		    client:SetArmor(200)
