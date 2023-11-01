@@ -86,12 +86,15 @@ function PLUGIN:HUDPaint()
 
     local AllCitizens = {}
     local AllUnits = {}
+    local AllConscripts = {}
 
     for client, char in ix.util.GetCharacters() do
       if char:GetFaction() == FACTION_CITIZEN then
         AllCitizens[#AllCitizens + 1] = char:GetName() .. ": #" .. client:GetNWString("cid", "<ERR>")
       elseif char:IsCombine() then
         AllUnits[#AllUnits + 1] = char:GetName()
+      elseif char:GetFaction() == FACTION_CONSCRIPT then
+        AllConscripts[#AllConscripts + 1] = char:GetName()
       end
     end
 
