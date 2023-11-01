@@ -49,9 +49,9 @@ function PLUGIN:Tick()
 					end
 
 					cam.Start2D()
-						draw.SimpleText("<:: C-i" .. camera:EntIndex() .. " ::>", "BudgetLabel", 4, 6)
-						draw.SimpleText("<:: " .. statusText .. " ::>", "BudgetLabel", 4, 6 + draw.GetFontHeight("BudgetLabel"), bulbColor)
-						draw.SimpleText(signalText, "BudgetLabel", 4, 252 - draw.GetFontHeight("BudgetLabel"))
+						draw.SimpleText("<:: C-i" .. camera:EntIndex() .. " ::>", "Frak", 4, 6)
+						draw.SimpleText("<:: " .. statusText .. " ::>", "Frak", 4, 6 + draw.GetFontHeight("Frak"), bulbColor)
+						draw.SimpleText(signalText, "Frak", 4, 252 - draw.GetFontHeight("Frak"))
 						draw.SimpleText("*", "CloseCaption_Normal", 256, 126, bulbColor, 1, 1)
 					cam.End2D()
 				render.PopRenderTarget()
@@ -71,7 +71,7 @@ function PLUGIN:HUDPaint()
 	if (client:IsCombine()) then
 		local colorRed = Color(255, 0, 0, 255)
 		local colorObject = Color(150, 150, 200, 255)
-		local fontHeight = draw.GetFontHeight("BudgetLabel")
+		local fontHeight = draw.GetFontHeight("Frak")
 
 		local curTime = CurTime()
 
@@ -106,7 +106,7 @@ function PLUGIN:HUDPaint()
 		for k, v in ipairs(self.hudObjectives) do
 			local textColor = Color(color_white.r, color_white.g, color_white.b, 255)
 
-			draw.SimpleText(v, "BudgetLabel", info.x, info.y, textColor, TEXT_ALIGN_RIGHT)
+			draw.SimpleText(v, "Frak", info.x, info.y, textColor, TEXT_ALIGN_RIGHT)
 
 			info.y = info.y + fontHeight
 		end
@@ -142,20 +142,20 @@ function PLUGIN:HUDPaint()
 						local timeUntil = math.Round((biosignalExpiry - (curTime - data.time)), 2)
 						timeUntil = timeUntil .. string.rep(0, (string.len(math.floor(timeUntil)) + 3) - string.len(timeUntil))
 
-						draw.SimpleText(text, "BudgetLabel", toScreen.x, toScreen.y, color, 1, 1)
+						draw.SimpleText(text, "Frak", toScreen.x, toScreen.y, color, 1, 1)
 						toScreen.y = toScreen.y + fontHeight
-						draw.SimpleText(text2, "BudgetLabel", toScreen.x, toScreen.y, colorRed, 1, 1)
+						draw.SimpleText(text2, "Frak", toScreen.x, toScreen.y, colorRed, 1, 1)
 						toScreen.y = toScreen.y + fontHeight
-						draw.SimpleText("<:: Removing " .. timeUntil .. "s ::>", "BudgetLabel", toScreen.x, toScreen.y, colorRed, 1, 1)
+						draw.SimpleText("<:: Removing " .. timeUntil .. "s ::>", "Frak", toScreen.x, toScreen.y, colorRed, 1, 1)
 					else
 						local text2 = "<:: Received " .. timeSince .. "s ::>"
-						draw.SimpleText(text, "BudgetLabel", toScreen.x, toScreen.y, color, 1, 1)
+						draw.SimpleText(text, "Frak", toScreen.x, toScreen.y, color, 1, 1)
 						toScreen.y = toScreen.y + fontHeight
-						draw.SimpleText(showDetail and text2 or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, color_white, 1, 1)
+						draw.SimpleText(showDetail and text2 or lowDetailText, "Frak", toScreen.x, toScreen.y, color_white, 1, 1)
 
 						if (data.isKnockedOut) then
 							toScreen.y = toScreen.y + fontHeight
-							draw.SimpleText("<:: Unconscious ::>", "BudgetLabel", toScreen.x, toScreen.y, colorRed, 1, 1)
+							draw.SimpleText("<:: Unconscious ::>", "Frak", toScreen.x, toScreen.y, colorRed, 1, 1)
 						end
 					end
 				end
@@ -179,11 +179,11 @@ function PLUGIN:HUDPaint()
 					local timeUntil = math.Round((requestExpiry - (curTime - data.time)), 2)
 					timeUntil = timeUntil .. string.rep(0, (string.len(math.floor(timeUntil)) + 3) - string.len(timeUntil))
 
-					draw.SimpleText("<:: Assistance Request ::>", "BudgetLabel", toScreen.x, toScreen.y, requestColor, 1, 1)
+					draw.SimpleText("<:: Assistance Request ::>", "Frak", toScreen.x, toScreen.y, requestColor, 1, 1)
 					toScreen.y = toScreen.y + fontHeight
-					draw.SimpleText(showDetail and text2 or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, color_white, 1, 1)
+					draw.SimpleText(showDetail and text2 or lowDetailText, "Frak", toScreen.x, toScreen.y, color_white, 1, 1)
 					toScreen.y = toScreen.y + fontHeight
-					draw.SimpleText("<:: Removing " .. timeUntil .. "s ::>", "BudgetLabel", toScreen.x, toScreen.y, colorRed, 1, 1)
+					draw.SimpleText("<:: Removing " .. timeUntil .. "s ::>", "Frak", toScreen.x, toScreen.y, colorRed, 1, 1)
 				end
 			end
 		end
@@ -221,26 +221,26 @@ function PLUGIN:HUDPaint()
 					local text1 = "<:: C-i" .. combineCamera:EntIndex() .. " ::>"
 					local showDetail = (Vector(toScreen.x, toScreen.y):Distance(halfScrVector) <= lowDetailBox)
 
-					draw.SimpleText(showDetail and text1 or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, colorObject, 1, 1)
+					draw.SimpleText(showDetail and text1 or lowDetailText, "Frak", toScreen.x, toScreen.y, colorObject, 1, 1)
 
 					if (type(data) == "table") then
 						local text2 = "<:: " .. table.Count(data) .. " Within Sights ::>"
 
 						toScreen.y = toScreen.y + fontHeight
-						draw.SimpleText(showDetail and text2 or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, color_white, 1, 1)
+						draw.SimpleText(showDetail and text2 or lowDetailText, "Frak", toScreen.x, toScreen.y, color_white, 1, 1)
 
 						if (#violations > 0) then
 							toScreen.y = toScreen.y + fontHeight
-							draw.SimpleText("<:: Violations Within Sights ::>", "BudgetLabel", toScreen.x, toScreen.y, colorRed, 1, 1)
+							draw.SimpleText("<:: Violations Within Sights ::>", "Frak", toScreen.x, toScreen.y, colorRed, 1, 1)
 
 							for i, violation in ipairs(violations) do
 								toScreen.y = toScreen.y + fontHeight
-								draw.SimpleText(showDetail and violation or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, color_white, 1, 1)
+								draw.SimpleText(showDetail and violation or lowDetailText, "Frak", toScreen.x, toScreen.y, color_white, 1, 1)
 							end
 						end
 					else
 						toScreen.y = toScreen.y + fontHeight
-						draw.SimpleText("<:: Disabled ::>", "BudgetLabel", toScreen.x, toScreen.y, colorRed, 1, 1)
+						draw.SimpleText("<:: Disabled ::>", "Frak", toScreen.x, toScreen.y, colorRed, 1, 1)
 					end
 				end
 			end
@@ -279,7 +279,7 @@ function PLUGIN:HUDPaint()
 						local text = "<:: c#" .. CID .. " ::>"
 						local color = team.GetColor(v:Team()) or color_white
 
-						draw.SimpleText(showDetail and text or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, color, 1, 1)
+						draw.SimpleText(showDetail and text or lowDetailText, "Frak", toScreen.x, toScreen.y, color, 1, 1)
 						toScreen.y = toScreen.y + fontHeight
 					end
 
@@ -291,11 +291,11 @@ function PLUGIN:HUDPaint()
 					if (v:GetLocalVar("ragdoll")) then violations[#violations + 1] = "<:: 1xLaying ::>"	end
 
 					if (#violations > 0) then
-						draw.SimpleText("<:: Possible Violation ::>", "BudgetLabel", toScreen.x, toScreen.y, colorRed, 1, 1)
+						draw.SimpleText("<:: Possible Violation ::>", "Frak", toScreen.x, toScreen.y, colorRed, 1, 1)
 
 						for i, violation in ipairs(violations) do
 							toScreen.y = toScreen.y + fontHeight
-							draw.SimpleText(showDetail and violation or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, color_white, 1, 1)
+							draw.SimpleText(showDetail and violation or lowDetailText, "Frak", toScreen.x, toScreen.y, color_white, 1, 1)
 						end
 					end
 				end
