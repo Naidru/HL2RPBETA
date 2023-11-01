@@ -1,4 +1,16 @@
-
+surface.CreateFont(
+  "FrakFont",
+  {
+    font = "Frak-Regular",
+    extended = true,
+    size = ScreenScale( 7.5 ),
+    weight = 200,
+    antialias = true,
+    shadow = true,
+    outline = true,
+    scanlines = 2
+  }
+)
 -- Running on tick to avoid some HUD conflicts.
 function PLUGIN:Tick()
 	local client = LocalPlayer()
@@ -71,7 +83,7 @@ function PLUGIN:HUDPaint()
 	if (client:IsCombine()) then
 		local colorRed = Color(255, 0, 0, 255)
 		local colorObject = Color(150, 150, 200, 255)
-		local fontHeight = draw.GetFontHeight("Frak-Regular")
+		local fontHeight = draw.GetFontHeight("FrakFont")
 
 		local curTime = CurTime()
 
