@@ -4,6 +4,20 @@ PLUGIN.SocioStatus = PLUGIN.SocioStatus or "GREEN"
 
 PLUGIN.BOL = PLUGIN.BOL or {}
 
+surface.CreateFont(
+  "CImpHUD",
+  {
+    font = "BudgetLabel",
+    extended = true,
+    size = ScreenScale( 7.5 ),
+    weight = 200,
+    antialias = true,
+    shadow = true,
+    outline = true,
+    scanlines = 2
+  }
+)
+
 local StatCol = {
   FRACTURED = Color(255, 0, 0),
   MARGINAL = Color(255, 255, 0),
@@ -100,7 +114,7 @@ function PLUGIN:HUDPaint()
 
     local CitizenManifest = table.concat(AllCitizens, "\n")
     local UnitManifest = table.concat(AllUnits, "\n")
-    draw.DrawText("Citizen Manifest: \n" .. CitizenManifest .. "\n\n\n" .. "Unit Manifest: \n" .. UnitManifest, "BudgetLabel", ScrW() - 200, ScrH() / 8, Color(255, 255, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_LEFT)
+    draw.DrawText("Citizen Manifest: \n" .. CitizenManifest .. "\n\n\n" .. "Unit Manifest: \n" .. UnitManifest, "CImpHUD", ScrW() - 200, ScrH() / 8, Color(255, 255, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_LEFT)
     local List = table.concat(self.BOL, "\n")
     --draw.SimpleText("Sociostatus: " .. NewStatus, "BudgetLabel", ScrW() - 200, 6, StatusCol, TEXT_ALIGN_LEFT, TEXT_ALIGN_LEFT)
     --draw.DrawText("BOL: \n" .. List, "BudgetLabel", ScrW() - 200, 30, Color(255, 255, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_LEFT)
