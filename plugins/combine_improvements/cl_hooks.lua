@@ -7,7 +7,7 @@ PLUGIN.BOL = PLUGIN.BOL or {}
 surface.CreateFont(
   "CImpHUD",
   {
-    font = "Frak",
+    font = "BudgetLabel",
     extended = true,
     size = ScreenScale( 7.5 ),
     weight = 200,
@@ -136,23 +136,23 @@ function PLUGIN:HUDPaint()
 
         if distance < 275 and CanSee then
 
-          draw.SimpleText(":: CID: #" .. cid .. " ::", "Frak", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-          draw.SimpleText(":: Citizen Status: " .. cstatus .. " ::", "Frak", ToScreen.x, ToScreen.y + 15, statcol, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: CID: #" .. cid .. " ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: Citizen Status: " .. cstatus .. " ::", "BudgetLabel", ToScreen.x, ToScreen.y + 15, statcol, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           if client:GetActiveWeapon() != NULL and client:IsWepRaised() then
-            draw.SimpleText(":: Evaluation: EXPUNGE ::", "Frak", ToScreen.x, ToScreen.y + 30, Color(255, 0, 0), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText(":: Evaluation: EXPUNGE ::", "BudgetLabel", ToScreen.x, ToScreen.y + 30, Color(255, 0, 0), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           elseif table.HasValue(self.BOL, client:GetName()) or client:GetNWString("CivilStatus", "NO CIVIL STATUS") == "Anti-Citizen" then
-            draw.SimpleText(":: Evaluation: PACIFY ::", "Frak", ToScreen.x, ToScreen.y + 30, Color(255, 100, 0), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText(":: Evaluation: PACIFY ::", "BudgetLabel", ToScreen.x, ToScreen.y + 30, Color(255, 100, 0), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           else
-            draw.SimpleText(":: Evaluation: MONITOR ::", "Frak", ToScreen.x, ToScreen.y + 30, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText(":: Evaluation: MONITOR ::", "BudgetLabel", ToScreen.x, ToScreen.y + 30, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           end
 
         elseif distance > 275 and distance < 450 and CanSee then
           if client:GetActiveWeapon() != NULL and client:IsWepRaised() then
-            draw.SimpleText(":: Evaluation: EXPUNGE ::", "Frak", ToScreen.x, ToScreen.y, Color(255, 0, 0), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText(":: Evaluation: EXPUNGE ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(255, 0, 0), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           elseif table.HasValue(self.BOL, client:GetName()) or client:GetNWString("CivilStatus", "NO CIVIL STATUS") == "Anti-Citizen" then
-            draw.SimpleText(":: Evaluation: PACIFY ::", "Frak", ToScreen.x, ToScreen.y, Color(255, 100, 0), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText(":: Evaluation: PACIFY ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(255, 100, 0), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           else
-            draw.SimpleText(":: Evaluation: MONITOR ::", "Frak", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText(":: Evaluation: MONITOR ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           end
         end
       elseif char:GetFaction() == FACTION_MPF and client:Alive() and (client:GetMoveType() != MOVETYPE_NOCLIP) and client != LocalPlayer() then
@@ -178,30 +178,30 @@ function PLUGIN:HUDPaint()
         end
 
         if !unitdigits or !division or !unitrank then
-          draw.SimpleText(":: WARNING MALFORMED UNIT SIGNAL ::", "Frak", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: WARNING MALFORMED UNIT SIGNAL ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           return
         end
 
         if distance < 275 and CanSee then
-          draw.SimpleText(":: UNIT TAG: " .. division .. "-" .. unitdigits .. " ::", "Frak", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-          draw.SimpleText(":: UNIT Rank: " .. unitrank .. " ::", "Frak", ToScreen.x, ToScreen.y + 15, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: UNIT TAG: " .. division .. "-" .. unitdigits .. " ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: UNIT Rank: " .. unitrank .. " ::", "BudgetLabel", ToScreen.x, ToScreen.y + 15, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           if unitrank == "CmD" then
-            draw.SimpleText(":: Evaluation: SACRIFICE ::", "Frak", ToScreen.x, ToScreen.y + 30, Color(tsin, tsin, tsin), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText(":: Evaluation: SACRIFICE ::", "BudgetLabel", ToScreen.x, ToScreen.y + 30, Color(tsin, tsin, tsin), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           else
-            draw.SimpleText(":: Evaluation: PROTECT ::", "Frak", ToScreen.x, ToScreen.y + 30, Color(0, 110, 230), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText(":: Evaluation: PROTECT ::", "BudgetLabel", ToScreen.x, ToScreen.y + 30, Color(0, 110, 230), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           end
         elseif distance > 275 and distance < 450 and CanSee then
           if unitrank == "CmD" then
-            draw.SimpleText(":: Evaluation: SACRIFICE ::", "Frak", ToScreen.x, ToScreen.y, Color(tsin, tsin, tsin), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText(":: Evaluation: SACRIFICE ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(tsin, tsin, tsin), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           else
-            draw.SimpleText(":: Evaluation: PROTECT ::", "Frak", ToScreen.x, ToScreen.y, Color(0, 110, 230), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText(":: Evaluation: PROTECT ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(0, 110, 230), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           end
         elseif ix.config.Get("UnobstructedBioSig") == false then
           if CanSee then
-            draw.SimpleText("::" .. division .. "-" .. unitdigits .. "::", "Frak", ToScreen.x, ToScreen.y, Color(0, 110, 230), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            draw.SimpleText("::" .. division .. "-" .. unitdigits .. "::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(0, 110, 230), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           end
         else
-          draw.SimpleText("::" .. division .. "-" .. unitdigits .. "::", "Frak", ToScreen.x, ToScreen.y, Color(0, 110, 230), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText("::" .. division .. "-" .. unitdigits .. "::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(0, 110, 230), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
         end
 
 
@@ -210,22 +210,22 @@ function PLUGIN:HUDPaint()
         local unitrank = string.match(client:GetName(), "OWS") or string.match(client:GetName(), "EOW")
 
         if !unitdigits or !division or !unitrank then
-          draw.SimpleText(":: MALFORMED UNIT SIGNAL ::", "Frak", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: MALFORMED UNIT SIGNAL ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
           return
         end
 
         if LocalPlayer():GetCharacter():GetFaction() != FACTION_OTA and distance < 275 and CanSee then
-          draw.SimpleText(":: UNIT ID: #" .. math.random(11111, 99999) .. " ::", "Frak", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-          draw.SimpleText(":: UNIT ID: #" .. math.random(111, 999) .. " ::", "Frak", ToScreen.x, ToScreen.y + 15, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-          draw.SimpleText(":: Evaluation: SACRIFICE ::", "Frak", ToScreen.x, ToScreen.y + 30, Color(tsin, tsin, tsin), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: UNIT ID: #" .. math.random(11111, 99999) .. " ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: UNIT ID: #" .. math.random(111, 999) .. " ::", "BudgetLabel", ToScreen.x, ToScreen.y + 15, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: Evaluation: SACRIFICE ::", "BudgetLabel", ToScreen.x, ToScreen.y + 30, Color(tsin, tsin, tsin), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
         elseif LocalPlayer():GetCharacter():GetFaction() == FACTION_OTA and distance < 275 and CanSee then
-          draw.SimpleText(":: UNIT ID: #" .. unitdigits .. " ::", "Frak", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-          draw.SimpleText(":: UNIT ID: #" .. unitrank .. " ::", "Frak", ToScreen.x, ToScreen.y + 15, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-          draw.SimpleText(":: Evaluation: SACRIFICE ::", "Frak", ToScreen.x, ToScreen.y + 30, Color(tsin, tsin, tsin), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: UNIT ID: #" .. unitdigits .. " ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: UNIT ID: #" .. unitrank .. " ::", "BudgetLabel", ToScreen.x, ToScreen.y + 15, Color(255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: Evaluation: SACRIFICE ::", "BudgetLabel", ToScreen.x, ToScreen.y + 30, Color(tsin, tsin, tsin), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
         elseif distance > 275 and distance < 450 and CanSee then
-          draw.SimpleText(":: Evaluation: SACRIFICE ::", "Frak", ToScreen.x, ToScreen.y, Color(tsin, tsin, tsin), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText(":: Evaluation: SACRIFICE ::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(tsin, tsin, tsin), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
         elseif LocalPlayer():GetCharacter():GetFaction() == FACTION_OTA then
-          draw.SimpleText("::#" .. unitdigits .. "::", "Frak", ToScreen.x, ToScreen.y, Color(150, 50, 50), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+          draw.SimpleText("::#" .. unitdigits .. "::", "BudgetLabel", ToScreen.x, ToScreen.y, Color(150, 50, 50), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
         end
       end
     end

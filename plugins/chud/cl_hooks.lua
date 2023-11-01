@@ -7,7 +7,7 @@ PLUGIN.FactionCalls = PLUGIN.FactionCalls or { }
 surface.CreateFont(
   "CHudLabel",
   {
-    font = "Frak",
+    font = "BudgetLabel",
     extended = true,
     size = ScreenScale( 7.5 ),
     weight = 200,
