@@ -12,7 +12,7 @@ function PANEL:Init()
 	self.lines = {}
 
 	self:SetMaxLines(6)
-	self:SetFont("Frak-Regular")
+	self:SetFont("Frak")
 
 	self:SetPos(6, 6)
 	self:SetSize(ScrW(), self.maxLines * 20)
