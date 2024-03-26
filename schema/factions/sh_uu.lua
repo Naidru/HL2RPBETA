@@ -1,6 +1,6 @@
 
 FACTION.name = "Universal Union Official"
-FACTION.description = "Universal Union Representatives: Directly Represent the Union's interests and demands to better the Human race, and bring Unity to Earth. Your failures will mark our race's end. Do not dissapoint."
+FACTION.description = "Universal Union Representatives: Directly Represent the Union's interests and demands to better the Human race, and bring Unity to Earth. Your failures will mark our race's end. Do not disappoint."
 FACTION.color = Color(94, 226, 255, 255)
 FACTION.models = {
 	"models/humans/combine/female_01.mdl",
