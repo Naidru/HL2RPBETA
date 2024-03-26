@@ -1,5 +1,5 @@
 FACTION.name = "Synth"
-FACTION.description = "A transhuman Overwatch soldier produced by the Combine."
+FACTION.description = "The Synths are biomechanical weapons created by the Combine, featuring diverse combat capabilities and posing a formidable challenge to the resistance."
 FACTION.color = Color(140, 102, 98)
 FACTION.models = {"models/icarus_anon.mdl"}
 FACTION.weapons = {"weapon_vj_npccontroller"}
@@ -7,7 +7,7 @@ FACTION.isDefault = false
 FACTION.isGloballyRecognized = true
 
 function FACTION:GetDefaultName(client)
-	return "CMB-SNT.CRM-" .. Schema:ZeroNumber(math.random(1, 99999), 5), true
+	return "CMB-SNT.NULL-" .. Schema:ZeroNumber(math.random(1, 99999), 5), true
 end
 
 function FACTION:OnTransferred(character)
